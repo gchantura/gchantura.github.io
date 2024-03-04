@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TodoForm.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>TODO Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm">
+            <div class="form-group">
+
+
+                <!-- Dropdown for Recipient -->
+                <label for="recipient">Recipient<span style="font-size: 18px; color: red;"> *</span></label>
+                <select id="recipient" name="recipient">
+                    <option value="">Select Recipient</option>
+                    <option value="TODO Team">TODO Team</option>
+                    <option value="CC Team">Car Configurator Team</option>
+                    <option value="Deks Team">Desk Team</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="column">
+                        <!-- Client Name -->
+                        <label for="clientName">Client Name<span style="font-size: 18px; color: red;"> *</span></label>
+                        <select id="clientName" name="clientName">
+                            <option value="">Select Client</option>
+                            <!-- Options will be dynamically populated by JavaScript -->
+                        </select>
+                    </div>
+                    <div class="column">
+                        <!-- Country -->
+                        <label for="country">Country<span style="font-size: 18px; color: red;"> *</span></label>
+                        <select id="country" name="country">
+                            <option value="">Select Country</option>
+                            <!-- Options will be dynamically populated by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="column">
+                        <!-- Contact Person -->
+                        <label for="contactName">Contact Person<span style="font-size: 18px; color: red;">
+                                *</span></label>
+                        <input type="text" id="contactName" name="contactName" placeholder="Person Name">
+                    </div>
+                    <div class="column">
+                        <!-- Contact Email -->
+                        <label for="contactEmail">Contact Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" placeholder="Email Address">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="column">
+                        <!-- Category -->
+                        <label for="category">Category<span style="font-size: 18px; color: red;"> *</span></label>
+                        <select id="category" name="category">
+                            <option value="">Select Category</option>
+                            <!-- Options will be dynamically populated by JavaScript -->
+                        </select>
+                        <!-- Specify other category -->
+                        <input type="text" id="otherCategory" name="otherCategory" placeholder="Specify other category"
+                            style="display: none;">
+                    </div>
+                    <div class="column">
+                        <div class="row-30-70">
+                            <div class="column">
+                                <!-- Deadline -->
+                                <label class="deadlineCheckboxContainer" for="deadlineCheckbox">Deadline</label>
+                                <input class="deadlineCheckbox" type="checkbox" id="deadlineCheckbox"
+                                    name="deadlineCheckbox">
+                            </div>
+                            <div class="column">
+                                <div id="deadlineDate" style="display: none;">
+                                    <!-- Deadline Date -->
+                                    <div class="deadline-input-container">
+                                        <label for="deadline">Date:</label>
+                                        <input type="date" id="deadline" name="deadline" onchange="formatDate(this)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <!-- Subject -->
+                <label for="subject">Subject<span style="font-size: 18px; color: red;"> *</span></label>
+                <input type="text" id="subject" placeholder="Please Provide Clear and Correct Subject" name="subject">
+            </div>
+            <div class="form-group">
+                <!-- Message -->
+                <label for="message">Message<span style="font-size: 18px; color: red;"> *</span></label>
+                <textarea id="message"
+                    placeholder="Please Provide Full Information Which is needed for handle your Request" name="message"
+                    rows="4"></textarea>
+            </div>
+            <div class="form-group">
+
+                <label for="attachments">Attachments</label>
+                <span class="add-attachment" id="addAttachment">+ Add More</span>
+
+                <div id="attachmentsContainer">
+                    <!-- File input and comment field container -->
+                </div>
+
+            </div>
+
+
+            <div id="processNotification" style="display: none;">           
+                     If you want to change or create process as needed, please provide:
+                <ol>
+                    <li>Name of the process</li>
+                    <li>Subject of the process</li>
+                    <li>Process mail Text</li>
+                    <li>Trigger type</li>
+                    <li>Conditions: Country, RUNNING and so on.</li>
+                    <li>Attachment</li>
+                    <li>For test Order_ID, User_ID/Driver_Email or Reg_No</li>
+                    <li>Recipient</li>
+                    <li>Sender</li>
+                    <li>In case of Recipient is Provider, please Provide Each provider Email</li>
+                </ol>
+                Otherwise, please note that Tudu will not be produced.
+            </div>
+            
+            <button type="button" class="send-out-button">Send Out</button>
+
+        </form>
+    </div>
+
+    <script src="TodoForm.js"></script>
+
+</body>
+
+</html>
