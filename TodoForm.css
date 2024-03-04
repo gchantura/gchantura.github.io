@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.form-group .row-30-70 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+
+#deadline {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 180px;
+    height: 30px;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.deadline-input-container input[type="date"] {
+    width: 180px; /* Adjust width as needed */
+    height: 30px;
+    padding-left: 10px; /* Adjust according to the icon width */
+    padding-right: 10px;
+}
+
+.form-group .row .column {
+    width: calc(50% - 20px);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 300px;
+    resize: vertical;
+}
+
+.add-attachment {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.tick {
+    color: white;
+    font-size: 30px;
+    transition: all .7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+
+
+.send-out-button{
+    width: 120px;
+    height: 40px;
+    background-color: #88b4fc;
+    color: white;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro',"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 300px;
+    resize: vertical;
+}
+
+input[type="text"]:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+label:hover + input[type="text"]:invalid,
+label:hover + select:invalid,
+label:hover + textarea:invalid {
+    /* Add hover notification style here */
+}
+
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+}
+
+.send-out-button:hover {
+    background-color: #0056b3;
+}
+
+.send-out-button:active {
+    background-color: #004080;
+}
+
+/* Additional CSS styles as needed */
+
+@media screen and (max-width: 768px) {
+    .form-group .row .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
